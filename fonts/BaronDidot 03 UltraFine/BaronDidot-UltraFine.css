@@ -1,0 +1,12 @@
+/* Webfont: BaronDidot-UltraFine */@font-face {
+    font-family: 'BaronDidot03UltraFine';
+    src: url('BaronDidot-UltraFine.eot'); /* IE9 Compat Modes */
+    src: url('BaronDidot-UltraFine.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('BaronDidot-UltraFine.woff') format('woff'), /* Modern Browsers */
+         url('BaronDidot-UltraFine.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('BaronDidot-UltraFine.svg#BaronDidot-UltraFine') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

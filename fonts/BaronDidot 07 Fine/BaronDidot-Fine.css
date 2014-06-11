@@ -1,0 +1,12 @@
+/* Webfont: BaronDidot-Fine */@font-face {
+    font-family: 'BaronDidot07Fine';
+    src: url('BaronDidot-Fine.eot'); /* IE9 Compat Modes */
+    src: url('BaronDidot-Fine.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('BaronDidot-Fine.woff') format('woff'), /* Modern Browsers */
+         url('BaronDidot-Fine.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('BaronDidot-Fine.svg#BaronDidot-Fine') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,545 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+
+/* general */
+
+html {
+	height: 100%;
+	background: #fff;
+}
+body, html {
+	height: 100%;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	background: #fff;
+}
+div#wrap {
+	height : 100%;
+	background: url(img/background.png)repeat;
+	position : relative;
+}
+/* header*/
+
+#magic {
+	
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	margin: 0;
+	background: url(img/logo_magic_bridge.gif)no-repeat center center fixed;
+}
+
+#magic a
+{
+	display: block;
+	height : 100%;
+	width:100%;
+}
+#magic hgroup {
+	width: 50%;
+	height: 50%;
+	margin: 0 auto;
+	top: 25%;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+	font-size: 0;
+	display: none;
+}
+
+@-webkit-keyframes scroll{0% { opacity:2;} 50% {opacity:0.4;} 100%{opacity:2;}}
+    @-moz-keyframes scroll{0% { opacity:0;} 50% {opacity:0.2;} 100%{opacity:0;}}
+     @-ms-keyframes scroll{0% { opacity:0;} 50% {opacity:0.2;} 100%{opacity:0;}}
+      @-o-keyframes scroll{0% { opacity:0;} 50% {opacity:0.2;} 100%{opacity:0;}}
+         @keyframes scroll{0% { opacity:0;} 50% {opacity:0.2;} 100%{opacity:0;}}
+		 
+#scroll a {position:fixed; bottom:2%; left:45%; width:10%; background:; font-size:0.8em; text-transform:uppercase; height:4em; text-align:center; color:#fff; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;	-webkit-animation: scroll 2s linear 0s infinite; z-index:1; text-decoration:none; }
+
+#scroll a:after
+{
+	content:"";
+	width:26px;
+	height:16px;
+	display:block;
+	position: relative;
+	left :50%;
+	margin-left:-13px;
+	top : 10px;
+	background:url(img/scroll_to_enter.png);
+}
+
+/* nav*/
+
+
+#nav {
+	width: 100%;
+	height: 2.5em;
+	background: rgba(255,255,255,0.9);
+	position : relative;
+	z-index : 9999;
+}
+
+#nav.floatable {
+			position: fixed;
+			top: 0;
+			z-index : 9999;
+		}
+		
+#nav h1 {
+	width: 10%;
+	height: 100%;
+	float: left;
+	position: relative;
+	background:url(img/logo_magic_bridge_nav.png)no-repeat center;
+	font-size:0;
+	text-indent:-9000px;
+	
+}
+#nav #menu {
+	height: 100%;
+	width: 80%;
+	background: ;
+	text-align: center;
+	float: left;
+}
+#nav #menu li {
+	display: inline;
+}
+#nav #menu li a {
+	display: inline-block;
+	margin : 0 1%;
+	padding-top: 1.2em;
+	text-decoration: none;
+	font-size: 0.75em;
+	text-transform: uppercase;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:#666;
+}
+
+#nav #menu li a:hover
+{
+	color:#ec3c05;
+}
+#nav #social {
+	height: 100%;
+	width: 5%;
+	background: ;
+	text-align: right;
+	float: right;
+	
+}
+#nav #social li {
+	display: inline;
+}
+#nav #social li a {
+	width:100%;
+	height:100%;
+	display: inline-block;
+	padding-top: 1.2em;
+	text-decoration: none;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-size:0;
+	text-indent:-9000px;
+	background:url(img/logo_facebook.png)no-repeat center;
+}
+#nav #language {
+	height: 100%;
+	width: 5%;
+	background: ;
+	text-align: center;
+	float: right;
+	
+}
+#nav #language li {
+	display: inline;
+}
+#nav #language li a {
+	display: inline-block;
+	padding-top: 1.2em;
+	text-decoration: none;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#666;
+}
+
+#nav #language li.fr:after
+{
+	content:"/";
+	position : relative;
+	left : 2px;
+}
+
+/* courousel*/
+
+
+.swipe {
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.swipe-wrap {
+	overflow: hidden;
+	position: relative;
+}
+.swipe-wrap>div {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.carousel {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.carousel:before, .carousel:after {
+	content: "";
+	display: table;
+}
+.carousel:after {
+	clear: both;
+}
+.carousel .panel {
+	background-color: #fff;
+	text-align: center;
+	margin-bottom: 88px;
+	overflow: hidden;
+	height: 100%;
+	width: 100%
+}
+.carousel .panel .wrapper {
+	position: relative;
+	z-index: 1;
+}
+.carousel .panel span[class*="icon"] {
+	font-size: 3em;
+	line-height: 1.5em;
+	display: block;
+}
+.carousel .panel section, .carousel .panel article {
+	text-align: left;
+}
+.carousel .panel.alt * {
+	color: #fff;
+}
+.carousel .bg {
+	background-position: 50% 50%;
+	background-size: cover;
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0
+}
+.wrapper #video_background {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -999;
+}
+.wrapper #video_background video {
+	width: 100%;
+	height: 100%;
+}
+.carousel nav {
+	position: absolute;
+	bottom: 44px;
+	z-index: 4;
+	width: 100%;
+}
+.carousel nav a {
+	position: absolute;
+	z-index: 999;
+	bottom: 0;
+	width: 40px;
+	height: 40px;
+	display: block;
+	cursor: pointer;
+	overflow: hidden;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.carousel nav a.prev {
+    left: 50px;
+	background: url(img/previous.png)no-repeat center;
+	font-size: 0;
+	text-indent: -9000px;
+}
+.carousel nav a.next {
+	right: 50px;
+	background: url(img/next.png)no-repeat center;
+	font-size: 0;
+	text-indent: -9000px;
+}
+.carousel nav a.prev:before {
+	display: block;
+	content: '\f007';
+}
+.carousel nav a.next:before {
+	display: block;
+	content: '\f006';
+}
+.carousel nav .pagination {
+	margin: 0 auto 15px;
+	text-align: center;
+}
+.carousel nav .pagination ol {
+	margin: 0;
+	padding: 0;
+}
+.carousel nav .pagination li {
+	display: inline-block;
+	margin: 0 4px;
+}
+.carousel nav .pagination li a {
+	position: relative;
+	width: 12px;
+	height: 12px;
+	text-indent: -9000px;
+	border: solid 1px #fff;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	-ms-border-radius: 200px;
+	-o-border-radius: 200px;
+	border-radius: 200px;
+}
+.carousel-nav-paginated .carousel-active-page a {
+	text-decoration: none;
+}
+.carousel nav .pagination .active a {
+	background: #fff;
+}
+.carousel nav .pagination .active a:hover {
+	background: #EC3C05;
+}
+.button {
+	font-size: 1em;
+	color: #FFF !important;
+	width: auto;
+	padding: 8px 8px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+#accueil {
+	position: relative;
+	z-index: 100;
+	height: 100%;
+	padding: 0;
+ *zoom:1;
+}
+.presentation {
+	width: 50%;
+	height: 60%;
+	margin-top: 25%;
+	margin-left: 25%;
+	text-align:center;
+}
+.presentation h1 {
+	color: #fff;
+	font-size:3em;
+}
+.presentation H2 {
+	font-size: 1em;
+	color: #fff;
+}
+.presentation p {
+	margin-top:1em;
+	font-size: 1em;
+	color: #fff;
+}
+
+/* work*/
+
+
+#work { width:100%; float:left; position:relative; background:#fff; margin-top:0.5%; z-index:8000;}
+
+#work ul#all { width:100%; }
+
+#work ul#all li
+{display:inline;}
+
+#work > ul > li ul > li { float:left; position:relative; height : auto; overflow:hidden;}
+
+#work #important ul li ul li{overflow:hidden;}
+
+#work #all li ul > li a
+{
+	display : block; width : 100%; position :relative; height : 100%;
+}
+
+#work > ul > li a header,  ul li ul > li a header
+{
+	position :absolute;
+	top : 0;
+	text-align : center;
+	color : white;
+	display:block;
+	width:100%;
+	height : 100%;
+	padding-top : 25%;
+	display:;
+	background-color:rgba(0,0,0,0)
+	-webkit-transition:all 500ms ease-out; -moz-transition: all 500ms ease-out;
+	-o-transition:all 500ms ease-out; -ms-transition:all 500ms ease-out; transition:all 500ms ease-out;
+}
+
+#work > ul > li a:hover header, ul li ul > li a:hover header { display:block; background-color:rgba(0,0,0,0.6); color:rgba(255,255,255,1); -webkit-transition:all 500ms ease-out; -moz-transition: all 500ms ease-out;
+-o-transition:all 500ms ease-out; -ms-transition:all 500ms ease-out; transition:all 500ms ease-out;}
+
+#work #important .reference header  hgroup {display:none; text-indent:-9000px; font-size : 0;}
+
+#work #important .reference a:hover header {background: url(img/magic_reference.png) rgba(230,60,5,0.8); background-size:contain;}
+
+#work > ul > li a header hgroup,  ul li ul > li a header hgroup
+{
+	display:none;
+}
+
+#work > ul > li a:hover header hgroup,  ul li ul > li a:hover header hgroup
+{
+	display:block;
+}
+
+#work li a img
+{
+	width:100%;
+	height : auto;
+	top : 0; left : 0;
+}
+
+#work > ul .new_work { width:49.75%; background:red; }
+
+ul li a header h4 {font-size:2em; text-transform:uppercase; }
+
+#work ul .new_gauche {margin-right:0.25%;}
+#work ul .new_droite {margin-left:0.25%;}
+
+#work .manifesto { width:33%; background:red; float:left; position:relative; margin-top:0.5%; margin-right:0.25%;}
+
+#work .manifesto header { display:none;}
+
+#work .old_work { width:33%; background:red; float:left; position:relative; margin-top:0.5%; overflow:hidden;}
+
+#work  .old_left {  margin-right:0.25%; overflow:hidden;}
+
+#work  .old_center { margin-left:0.25%; margin-right:0.25%; overflow:hidden;}
+
+#work .old_right { margin-left:0.25%;}
+
+
+#work .film { width:66.45%;   background:red; float:left; position:relative; margin-top:0.5%; margin-right:0.25%;}
+
+#work .film_gauche { margin-right:0.25%;}
+
+#work .film_droite { margin-left:0.25%;}
+
+
+#work .chanet { width:33.05%; background:red; float:left; position:relative; margin-top:0.5%; margin-left:0.25%;}
+
+
+#work #important { width:100%; float : left; }
+
+#work #important .reference { width:66.45%; float:left; position:relative;  background:white; margin-top:0.5%; overflow:hidden;}
+
+
+#work #important .team { width:33.05%; float:left; position:relative;  background:purple; margin-top:0.5%; margin-left:0.5%; overflow:hidden;}
+
+#work #important .team header {display:none; }
+
+#work #important .digital { width:33.05%; float:left; position:relative;  background:purple; margin-top:0.5%; margin-left:0.5%; overflow:hidden;}
+
+#work #important .digital header {display:none;}
+
+#work ul .old_work.gifarmani header {display:none; }
+
+/*-----------------------------------------------------hover des cases--------*/
+
+
+
+/*footer*/
+
+#contact { width:100%; float:left; position:relative; margin-top:8%;z-index:9898;}
+
+/*map*/
+
+#map{ width:100%; height:2em; background:#FFF; float:left; position:relative; overflow:hidden;}
+
+#map #map-canvas { position:absolute; top:0; left:0; width:100%; height:100%; background:#FFF; cursor:crosshair; opacity:0.5;}
+
+#map #map-canvas iframe { width:100%; height:100%; }
+
+#map #infos { width:100%; height:100%;  background:#FAFAFA; margin:0 auto; text-align:center; }
+
+#map #infos p {
+	
+	display: inline-block;
+	margin : 0 1.7%;
+	text-decoration: none;
+	font-size: 0.75em;
+	text-transform: uppercase;
+	font-family:"Times New Roman", Times, serif;
+	color:#666;
+	padding-top:0.8em;
+	
+	}
+
+
+
+
+
+
+
+
+
+
+/*footer footer*/
+
+#contact footer { width:100%;  background:#C60; height:5em; float:left; position:relative;}
+
+#contact footer .footerleft {
+	height: 100%;
+	width: 100%;
+	background:#ec3c05;
+	text-align: left;
+	float: left;
+}
+#contact footer .footerleft  li {
+	display: inline;
+}
+
+#contact footer .footerleft  li a {
+	display: inline-block;
+	margin : 0 0.6%;
+	padding-top: 3.2em;
+	text-decoration: none;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	color:#fff;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	
+}
+
+#contact footer .footerleft  li:first-child { margin-left:5%;}
+
+
+/** clearfix **/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+
+
